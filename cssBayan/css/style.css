@@ -45,11 +45,11 @@ h1 {
 }
 
 .accordion-wrapper {
-   font-size: 0.8em;
+   font-size: 1em;
    max-width: 100%;
    margin: 0 auto;
    animation: showLeft 1s ease-in;
-   color: bisque;
+   color: rgb(248, 205, 13);
    -webkit-text-stroke: 0.01em white;
    padding: 0 0.3em 0 0.3em;
    display: flex;
@@ -89,7 +89,7 @@ h1 {
 .accordion-title {
    display: block;
    padding: 10px;
-   transition: background .2s ease-out
+   font-weight: 400;
 }
 
 .fa-face-laugh-squint {
@@ -128,7 +128,7 @@ h1 {
 
 .accordion-input:checked~.accordion-top {
    border-radius: 0.5rem 0.5rem 0 0;
-   color: blanchedalmond;
+   color: bisque;
    text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(255, 234, 0);
 }
 
@@ -153,7 +153,7 @@ h1 {
 @media (min-width: 820px) {
    .accordion-wrapper {
       padding: 0 3em 0 3em;
-      font-size: 1em;
+      font-size: 1.1em;
    }
 
    .accordion-top {
@@ -177,7 +177,7 @@ h1 {
 
    .accordion-wrapper {
       padding: 0 10em 0 10em;
-      font-size: 1.2em;
+      font-size: 1.3em;
       row-gap: 0.1em;
    }
 
