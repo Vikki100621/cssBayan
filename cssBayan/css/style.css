@@ -1,0 +1,228 @@
+body {
+   font-family: 'Source Code Pro', monospace;
+   line-height: 150%;
+   background-color: beige;
+}
+
+
+h1,
+h2,
+img {
+   margin: 0;
+}
+
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   row-gap: 2em;
+   align-items: center;
+
+}
+
+header {
+   flex: 0 0 auto;
+}
+
+.main {
+   flex: 1 0 auto;
+}
+
+footer {
+   flex: 0 0 auto;
+}
+
+h1 {
+   padding-top: 0.5em;
+   font-family: 'Fredoka One', cursive;
+   color: rgb(212, 79, 216);
+   -webkit-text-stroke: 0.01em white;
+}
+
+.accordion-wrapper {
+   font-size: 1em;
+   max-width: 100%;
+   margin: 0 auto;
+   animation: showLeft 1s ease-in;
+   color: rgb(248, 205, 13);
+   -webkit-text-stroke: 0.01em white;
+   padding: 0 0.3em 0 0.3em;
+   display: flex;
+   flex-direction: column;
+   row-gap: 0.5em;
+}
+
+.accordion-item {
+   width: 100%;
+   margin: 0 auto;
+   padding-top: 0;
+}
+
+.accordion-icon {
+   display: none;
+   width: 7%;
+}
+
+.accordion-top {
+   max-width: 100%;
+   background-color: rgb(243, 155, 246);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0.7em;
+   border-radius: 0.5rem;
+   cursor: pointer;
+}
+
+.accordion-bottom {
+   max-height: 20rem;
+   padding-top: 0.3em;
+   padding-bottom: 0.3em;
+}
+
+.accordion-title {
+   display: block;
+   padding: 10px;
+   font-weight: 400;
+}
+
+.fa-face-laugh-squint {
+   display: none;
+}
+
+.accordion-input {
+   width: 0;
+   height: 0;
+   appearance: none;
+}
+
+.accordion-input:checked~.accordion-bottom>.img {
+   max-height: 22vh;
+}
+
+.accordion-input:checked~.accordion-top>.fa-face-laugh-squint {
+   display: block;
+   color: white;
+   animation: spin 0.4s linear;
+}
+
+@keyframes spin {
+   from {
+      transform: rotate(0deg);
+   }
+
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+.accordion-input:checked~.accordion-top>.fa-face-laugh-beam {
+   display: none;
+}
+
+.accordion-input:checked~.accordion-top {
+   border-radius: 0.5rem 0.5rem 0 0;
+   color: bisque;
+   text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(255, 234, 0);
+}
+
+.accordion-bottom {
+   width: 100%;
+   height: 25vh;
+   max-height: 11rem;
+   margin: 0 auto;
+   padding-top: 0.1em;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.img {
+   display: block;
+   margin: 0 auto;
+   max-height: 0;
+   transition: max-height 0.7s ease;
+}
+
+@media (min-width: 820px) {
+   .accordion-wrapper {
+      padding: 0 3em 0 3em;
+      font-size: 1.1em;
+   }
+
+   .accordion-top {
+      padding: 0.2em;
+   }
+
+   .accordion-input:checked~.accordion-bottom>.img {
+      max-height: 53vh;
+   }
+
+   h1 {
+      font-size: 2.5em;
+   }
+}
+
+@media (min-width: 1080px) {
+
+   .accordion-item:active {
+      opacity: 0.7;
+   }
+
+   .accordion-wrapper {
+      padding: 0 10em 0 10em;
+      font-size: 1.3em;
+      row-gap: 0.1em;
+   }
+
+   .accordion-input:checked~.accordion-bottom>.img {
+      max-height: 53vh;
+   }
+
+   h1 {
+      font-size: 3em;
+   }
+}
+
+@media (hover: hover) {
+
+   .accordion-item:hover>.accordion-bottom>.img {
+      max-height: 53vh;
+   }
+
+   .accordion-item:hover>.accordion-top {
+      border-radius: 0.5rem 0.5rem 0 0;
+      text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(255, 234, 0);
+   }
+
+   .accordion-item:hover>.accordion-top>.fa-face-laugh-beam {
+      display: none;
+   }
+
+   .accordion-item:hover>.accordion-top>.fa-face-laugh-squint {
+      display: block;
+      animation: spin 0.4s linear;
+   }
+
+   @keyframes spin {
+      from {
+         transform: rotate(0deg);
+      }
+
+      to {
+         transform: rotate(360deg);
+      }
+   }
+
+   .accordion-wrapper:hover {
+      color: white;
+   }
+
+   .accordion-wrapper:hover>.accordion-item>.accordion-input:checked~.accordion-top {
+      text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(255, 234, 0);
+   }
+}
