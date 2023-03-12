@@ -63,10 +63,6 @@ h1 {
    padding-top: 0;
 }
 
-.accordion-item:active {
-   opacity: 0.7;
-}
-
 .accordion-icon {
    display: none;
    width: 7%;
@@ -175,6 +171,10 @@ h1 {
 
 @media (min-width: 1080px) {
 
+   .accordion-item:active {
+      opacity: 0.7;
+   }
+
    .accordion-wrapper {
       padding: 0 10em 0 10em;
       font-size: 1.2em;
@@ -184,6 +184,13 @@ h1 {
    .accordion-input:checked~.accordion-bottom>.img {
       max-height: 53vh;
    }
+
+   h1 {
+      font-size: 3em;
+   }
+}
+
+@media (hover: hover) {
 
    .accordion-item:hover>.accordion-bottom>.img {
       max-height: 53vh;
@@ -219,9 +226,5 @@ h1 {
 
    .accordion-wrapper:hover>.accordion-item>.accordion-input:checked~.accordion-top {
       text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em rgb(255, 234, 0);
-   }
-
-   h1 {
-      font-size: 3em;
    }
 }
