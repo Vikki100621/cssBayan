@@ -69,7 +69,6 @@ h1 {
 }
 
 .accordion-top {
-
    max-width: 100%;
    background-color: rgb(243, 155, 246);
    display: flex;
@@ -140,7 +139,6 @@ h1 {
    padding-top: 0.1em;
    overflow: hidden;
    cursor: pointer;
-
 }
 
 .img {
